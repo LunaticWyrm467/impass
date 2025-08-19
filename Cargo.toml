@@ -1,0 +1,19 @@
+[package]
+name    = "impass"
+version = "0.1.0"
+edition = "2024"
+
+keywords    = ["error", "error-handling"]
+repository  = "https://github.com/LunaticWyrm467/impass"
+description = "A simply way to handle fatal errors in an ergonomic way!"
+license     = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn         = { version = "1.0", features = ["parsing", "full", "extra-traits", "printing"] }
+quote       = "1.0"
+proc-macro2 = "1.0"
+anyhow      = { version = "1.0", features = ["backtrace"] }
+thiserror   = "1.0"
