@@ -21,7 +21,7 @@ making your code more readable and your intent explicit.
 (|| -> Result<(), anyhow::Error> {
     let result = some_fallible_function()?;
     Ok(())
-})().expect("Fatal error occurred.");
+})().expect("Fatal error occurred");
 ```
 
 The `fatal!` macro replaces this with a single, clear, and more expressive
@@ -69,7 +69,7 @@ This also provides a function attribute:
 use impass::fatal_fn;
 
 #[fatal_fn(reason = "Critical failure in function execution")] // `reason` is optional.
-fn example_function() -> Result<i32, anyhow::Error> {
+fn example_function() -> i32 {
     let value = fallible_function_a()?;
     Ok(value)
 }
